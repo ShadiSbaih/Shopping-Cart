@@ -1,31 +1,24 @@
-Reviewer Feedback:
-Dear student,
-You did an excellent job! I like you used Swal!🚀
-All the specifications were met, way to go! ⭐
-Congratulations on finishing the Introduction to Programming Nanodegree Program! I hope you enjoyed your time here with us. I wish you all the best in your career as a developer.
-Project Summary
-You will be creating the core functionality used for a storefront application. The visual of the storefront and the JavaScript necessary to connect the code you will write to that visual has already been created. Shopping carts are a fantastic tool for practicing JavaScript fundamentals. First, think of the product list. You have learned about object literals. Objects are a perfect way to store product data, and you can use an array to collect those objects. Each product must be able to be added to the cart. Next, we have the shopping cart. Carts usually have quite a bit of functionality. Once the cart is populated with products, you need to be able to increase or decrease the quantity or fully remove an item. The cart often displays the individual product totals and updates as the quantity changes. Finally, there’s the checkout. For this project, assume it’s a cash-only storefront at a street market. The checkout should show the final amount due for all products in the cart. For any amount of cash received, the receipt should show what is still owed by the customer or how much should be returned to the customer if they gave more than the total due.
+Storefront Application - Introduction to Programming Nanodegree Project
+Welcome to the Storefront Application project! This project is part of the Introduction to Programming Nanodegree Program. The core functionality for a storefront application has been implemented here, using JavaScript to manage the shopping cart and checkout process. The visual elements and connecting JavaScript for the user interface are pre-built.
 
-Project Criteria
-All work on products, cart, and checkout are done in script.js.
-While viewing the live shop webpage, a user should be able to do the following:
-Add item to the cart:
-The first time an item is clicked, the item is added to the cart
-After the first time an item is clicked, the quantity is increased.
-Increase, decrease and remove an item from the cart :
-Decreasing when quantity is at 1 will remove the item from the cart.
-Remove will remove the item from the cart completely (even if quantity is greater than 1).
-A minimum of 3 products should be created.
-Each product object should include a unique name, price, quantity, productId, and image.
-All of the products should be in an array named products.
-Write JavaScript functions to implement cart functionality
-addProductToCart(productId) : gets the product using the productId and checks if the product is already in the array. If the product is in the cart, the product quantity is increased. If not, the product is added to cart.
-increaseQuantity(productId): gets product using the productId and increases product quantity.
-decreaseQuantity(productId): gets product using the productId and decreases product quantity.
-removeProductFromCart(productId) : gets product using the productId and removes it entirely from the cart.
-All functions should be created using function declaration.
-Javascript functions are created to implement required functionality:
-cartTotal(): calculates and returns the cost of all items in the cart.
-pay(amount): takes in an amount from the text field and checks if the amount is greater or less than the value of cartTotal. Returns the positive or negative difference.
-All functions should be created using function declaration.
-A global variable is created to hold the value of the remaining balance.
+Project Overview
+The main objectives of this project are:
+
+To add products to a shopping cart.
+To manage the quantities of products within the cart.
+To handle the checkout process, including calculating totals and managing cash transactions.
+Features
+Product Management
+Product List: Products are stored using object literals, and all product objects are stored in an array named products.
+Add Item to Cart: Clicking on a product adds it to the cart. If the product is already in the cart, its quantity is increased.
+Increase, Decrease, and Remove Items: Users can increase or decrease the quantity of products in the cart. Decreasing the quantity to 1 and clicking again will remove the item from the cart. There is also an option to remove the item entirely.
+Shopping Cart Functionality
+Add Product to Cart: addProductToCart(productId) checks if the product is in the cart. If it is, the quantity is increased. If not, the product is added to the cart.
+Increase Quantity: increaseQuantity(productId) increases the quantity of the product in the cart.
+Decrease Quantity: decreaseQuantity(productId) decreases the quantity of the product. If the quantity reaches 0, the product is removed from the cart.
+Remove Product: removeProductFromCart(productId) removes the product from the cart entirely.
+Checkout Functionality
+Cart Total: cartTotal() calculates and returns the total cost of all items in the cart.
+Payment Handling: pay(amount) accepts an amount of cash from the user and calculates if there is any remaining balance or change to be given back to the user.
+Global Variables
+A global variable holds the value of the remaining balance after a payment is made.
