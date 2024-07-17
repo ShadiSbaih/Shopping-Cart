@@ -50,12 +50,7 @@ function increaseQuantity(productId) {
    takes productId as a param and returns the product from products array.
 */
 function getProductById(productId) {
-  for (let i = 0; i < products.length; i++) {
-    if (products[i].productId === productId) {
-      return products[i];
-    }
-  }
-  return null;
+  return products.find(product => product.productId === productId);
 }
 
 /* Create a function named decreaseQuantity that takes in the productId as an argument
@@ -88,9 +83,16 @@ function decreaseQuantity(productId) {
           } else {
               product.quantity = 1; // Revert quantity to 1 if user cancels
           }
+          // Always redraw the cart and checkout regardless of confirmation result
+          drawCart();
+          drawCheckout();
       });
+  } else {
+      drawCart();
+      drawCheckout();
   }
 }
+
 
 
 /* Create a function named removeProductFromCart that takes in the productId as an argument
@@ -120,8 +122,12 @@ function cartTotal() {
 
 /* Create a function called emptyCart that empties the products from the cart */
 function emptyCart() {
+ cart.forEach(item => {
+     item.quantity = 0;
+ });
   cart = [];
 }
+
 
 /* Create a function named pay that takes in an amount as an argument
   - pay will return a negative number if there is a remaining balance
