@@ -93,8 +93,6 @@ function decreaseQuantity(productId) {
   }
 }
 
-
-
 /* Create a function named removeProductFromCart that takes in the productId as an argument
   - removeProductFromCart should get the correct product based on the productId
   - removeProductFromCart should update the product quantity to 0
@@ -124,10 +122,9 @@ function cartTotal() {
 function emptyCart() {
  cart.forEach(item => {
      item.quantity = 0;
- });
+                      });
   cart = [];
 }
-
 
 /* Create a function named pay that takes in an amount as an argument
   - pay will return a negative number if there is a remaining balance
